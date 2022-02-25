@@ -19,6 +19,7 @@ public class ProductContext : DbContext
         var contextName = this.GetType().Name;
         var databaseName = contextName.Remove(contextName.Length - "Context".Length);
         ConnectionString += ";Database=" + databaseName;
+        //ConnectionString = "Host=localhost;Username=somebody;Password=somepwd;;Database=NexxtPilot";
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
